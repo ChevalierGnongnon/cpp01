@@ -6,11 +6,19 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:36:25 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/17 12:12:35 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:05:16 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie(){}
+
+Zombie::Zombie(std::string name){
+	this->name = name;
+}
+
+Zombie::~Zombie(){}
 
 std::string Zombie::getName(){
 	return (this->name);
@@ -23,3 +31,4 @@ void Zombie::setName(const std::string input){
 void Zombie::announce(void){
 	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
+
