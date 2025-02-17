@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:36:21 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/17 13:42:37 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/17 14:46:34 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	randomChump(std::string name){
 	Zombie *newOne = new Zombie(name);
 	newOne->announce();
+	delete newOne;
 }
