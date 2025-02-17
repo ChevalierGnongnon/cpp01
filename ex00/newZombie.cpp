@@ -6,8 +6,12 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:36:17 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/17 10:37:11 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/17 12:05:42 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+// Zombie *newZombie(std::string name){
+	
+// }
