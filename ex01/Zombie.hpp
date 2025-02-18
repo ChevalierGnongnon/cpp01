@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:36:28 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/17 14:39:46 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/17 15:31:35 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ class Zombie {
 };
 
 Zombie *newZombie(std::string name);
-void	randomChump(std::string name);
+Zombie *zombieHorde(int N, std::string name);
 
 #endif

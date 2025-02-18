@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:14:01 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/17 15:14:47 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/17 15:32:36 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int main(void)
 {
-	
+	Zombie *horde = zombieHorde(1, "Marie-Michel");
 }
