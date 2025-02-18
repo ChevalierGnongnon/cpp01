@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:14:01 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/18 12:55:11 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/18 12:57:34 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int main(int argc, char **argv)
 		}
 		name = argv[2];
 		horde = zombieHorde(n, name);
+		if (!horde)
+			return (0);
 		for (i = 0; i < n; i++)
 			horde[i].announce();
 		delete[] horde;
