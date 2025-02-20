@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:11:26 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/18 15:22:26 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/20 13:26:32 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ class Weapon {
 	private :
 		std::string type;
 	public :
-		std::string getType();
-		std::string setType();
+		std::string	getType();
+		void		setType(std::string type);
 	Weapon();
 	~Weapon();
 };
