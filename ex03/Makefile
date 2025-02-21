@@ -6,7 +6,35 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/18 15:11:17 by chhoflac          #+#    #+#              #
-#    Updated: 2025/02/18 15:11:18 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/02/21 17:22:17 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = fight
+
+SOURCES = HumanA.cpp \
+		HumanB.cpp \
+		main.cpp
+
+OBJS = $(SOURCES:.cpp=.o)
+
+RM = rm -rf
+
+CC = c++
+
+FLAGS = -Werror -Wextra -Wall
+
+all: $(NAME)
+
+$(NAME):$(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME) --std=c++98
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean $(NAME)
+
+.PHONY: all clean fclean re
