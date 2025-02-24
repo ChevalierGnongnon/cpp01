@@ -6,12 +6,12 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:11:09 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/24 11:57:38 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/24 12:00:33 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
-#define HUMANB_HPP
+# define HUMANB_HPP
 # include <string>
 # include <iostream>
 # include "Weapon.hpp"
@@ -26,7 +26,7 @@ class HumanB{
 		void		setName(std::string name);
 		void		setWeapon(Weapon &Weapon);
 		void		attack();
-	HumanB();
+	HumanB(std::string name);
 	~HumanB();
 };
 #endif
