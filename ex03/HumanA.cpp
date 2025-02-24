@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:10:58 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/24 11:03:16 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/24 11:52:07 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ void HumanA::setWeapon(Weapon &Weapon){
 }
 
 void HumanA::attack(){
-	std::cout << this->name << "attacks with their" << this->weapon.getType() << std::endl
+	std::cout << this->name << "attacks with their" << this->weapon.getType() << std::endl;
 }

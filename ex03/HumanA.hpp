@@ -6,13 +6,15 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:11:01 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/24 11:03:38 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/24 11:58:25 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include <string>
-#include <iostream>
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+# include "Weapon.hpp"
+# include <string>
+# include <iostream>
 
 class HumanA {
 	private :
@@ -28,3 +30,4 @@ class HumanA {
 	HumanA(std::string name, Weapon &Weapon);
 	~HumanA();
 };
+#endif
