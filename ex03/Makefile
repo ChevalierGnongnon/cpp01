@@ -6,7 +6,7 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/18 15:11:17 by chhoflac          #+#    #+#              #
-#    Updated: 2025/02/21 17:22:17 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/02/24 12:44:27 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = fight
 
 SOURCES = HumanA.cpp \
 		HumanB.cpp \
+		Weapon.cpp \
 		main.cpp
 
 OBJS = $(SOURCES:.cpp=.o)

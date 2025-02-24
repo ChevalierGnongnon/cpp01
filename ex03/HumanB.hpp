@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:11:09 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/24 12:00:33 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/02/24 13:37:06 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class HumanB{
 	private :
 		std::string name;
-		Weapon		weapon;
+		Weapon		*weapon;
 	public :
 		std::string getName();
-		Weapon		&getWeapon();
+		Weapon		*getWeapon();
 		void		setName(std::string name);
 		void		setWeapon(Weapon &Weapon);
 		void		attack();
