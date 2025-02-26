@@ -6,11 +6,11 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/24 15:51:25 by chhoflac          #+#    #+#              #
-#    Updated: 2025/02/24 15:58:00 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/02/26 10:37:09 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fight
+NAME = replace
 
 SOURCES = main.cpp
 
