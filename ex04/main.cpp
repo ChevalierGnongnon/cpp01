@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:49:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/02/26 13:43:16 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/02 16:27:24 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,81 @@
 #include <iostream>
 #include <fstream>
 
-int main(int argc, char **argv){
-	
-	std::string		line;
-	std::string		filename;
-	std::string		content;
-	std::string		s1;
-	std::string		s2;
-	std::string		before;
-	std::ifstream 	file;
-	size_t 			pos;
-	size_t			start;
-	
-	if (argc  == 4)
+std::string get_content(std::ifstream &file)
+{
+	std::string content;
+	std::string line;
+
+	while (std::getline(file, line))
 	{
-		filename = argv[1];
-		s1 = argv[2];
-		s2 = argv[3];
-		file.open(filename.c_str());
-		start = 0;
-		if (!file)
-		{
-			std::cerr << "Error: could not open file" << std::endl;
-			return (0);
-		}
-		while (std::getline(file, line)){
-			content += line;
-			if (!content.empty())
-				content += "\n";
-		}
-		while (content.find(s1, pos)){
-			before = content.substr(start, )
-		}
-		std::cout << content;
-		file.close();
-	
+		content += line + "\n";
 	}
-	else
-		std::cout << "Error: need more arguments : <filename> <s1> <s2>" << std::endl;
+	return (content);
+}
+
+std::string replace(std::string &content, std::string &s1, std::string &s2)
+{
+	std::string result;
+	size_t		find;
+	size_t 		pos;
+	
+	pos = 0;
+	if (s1.empty())
+		return (content);
+	find = content.find(s1, pos);
+	while (find !=std::string::npos)
+	{
+		result += content.substr(pos, find - pos);
+		result += s2;
+		pos = find + s1.length();
+		find = content.find(s1, pos);
+	}
+	result += content.substr(pos);
+	return (result);
+}
+
+void	write_into_newfile(std::string filename, std::string &content)
+{
+	std::ofstream newOne(filename + ".replace");
+
+	if (!newOne.is_open()){
+		std::cerr << "Error : could not access / open file" << std::endl;
+	}
+	else {
+		newOne << content;
+		newOne.close();
+	}
+	
+	
+}
+
+int main(int argc, char **argv)
+{
+	std::string filename;
+	std::string s1;
+	std::string s2;
+	std::ifstream file;
+	std::ofstream newOne;
+	std::string content;
+	std::string res;
+
+	if (argc != 4)
+	{
+		std::cerr << "Error: wrong arguments (<filename> <s1> <s2>)" << std::endl;
+		return (1);
+	}
+	filename = argv[1];
+	s1 = argv[2];
+	s2 = argv[3];
+	file.open(filename.c_str(), std::ios::in);
+	if (!file.is_open())
+	{
+		std::cerr << "Error : could not access / open file" << std::endl;
+		return (1);
+	}
+	content = get_content(file);
+	res = replace(content, s1, s2);
+	write_into_newfile(filename, res);
+	file.close();
+	return (0);
 }
