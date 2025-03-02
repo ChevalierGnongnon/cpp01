@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:49:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/02 16:27:24 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/02 16:29:41 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ void	write_into_newfile(std::string filename, std::string &content)
 		newOne << content;
 		newOne.close();
 	}
-	
-	
 }
 
 int main(int argc, char **argv)
