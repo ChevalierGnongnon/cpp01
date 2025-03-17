@@ -6,25 +6,15 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:49:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/02 16:29:41 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:39:50 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
-std::string get_content(std::ifstream &file)
-{
-	std::string content;
-	std::string line;
-
-	while (std::getline(file, line))
-	{
-		content += line + "\n";
-	}
-	return (content);
-}
 
 std::string replace(std::string &content, std::string &s1, std::string &s2)
 {
@@ -47,17 +37,17 @@ std::string replace(std::string &content, std::string &s1, std::string &s2)
 	return (result);
 }
 
-void	write_into_newfile(std::string filename, std::string &content)
+void write_into_newfile(const std::string &filename, const std::string &content)
 {
-	std::ofstream newOne(filename + ".replace");
+	std::string newFilename = filename + ".replace";
+	std::ofstream newOne(newFilename.c_str());
 
-	if (!newOne.is_open()){
-		std::cerr << "Error : could not access / open file" << std::endl;
+	if (!newOne.is_open())
+	{
+		std::cerr << "Error: could not open file for writing" << std::endl;
+		return ;
 	}
-	else {
-		newOne << content;
-		newOne.close();
-	}
+	newOne << content;
 }
 
 int main(int argc, char **argv)
@@ -65,10 +55,8 @@ int main(int argc, char **argv)
 	std::string filename;
 	std::string s1;
 	std::string s2;
-	std::ifstream file;
-	std::ofstream newOne;
-	std::string content;
-	std::string res;
+	std::stringstream buffer;
+	std::string content, res;
 
 	if (argc != 4)
 	{
@@ -78,15 +66,15 @@ int main(int argc, char **argv)
 	filename = argv[1];
 	s1 = argv[2];
 	s2 = argv[3];
-	file.open(filename.c_str(), std::ios::in);
-	if (!file.is_open())
+	std::ifstream infile(filename.c_str());
+	if (!infile)
 	{
-		std::cerr << "Error : could not access / open file" << std::endl;
+		std::cerr << "Error: could not open the input file" << std::endl;
 		return (1);
 	}
-	content = get_content(file);
+	buffer << infile.rdbuf();
+	content = buffer.str();
 	res = replace(content, s1, s2);
 	write_into_newfile(filename, res);
-	file.close();
 	return (0);
 }
