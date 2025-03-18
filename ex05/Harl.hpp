@@ -6,11 +6,12 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 14:05:09 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/17 14:34:50 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/18 16:51:21 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
+#include <iostream>
 
 class Harl{
 	private :
@@ -20,4 +21,6 @@ class Harl{
 		void	error(void);
 	public :
 		void	complain(std::string level);
+		Harl();
+		~Harl();
 };

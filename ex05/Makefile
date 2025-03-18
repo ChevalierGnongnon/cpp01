@@ -6,11 +6,11 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/17 14:05:16 by chhoflac          #+#    #+#              #
-#    Updated: 2025/03/17 14:06:10 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/03/18 16:55:10 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Horde
+NAME = Harl
 
 SOURCES = main.cpp \
 		Harl.cpp
