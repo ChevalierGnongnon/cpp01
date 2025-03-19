@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 14:05:12 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/18 17:16:43 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/19 09:09:49 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int main(int argc, char **argv) {
     karen.complain("debug");
     karen.complain("info");
     karen.complain("error");
-
+	karen.complain("");
 }
